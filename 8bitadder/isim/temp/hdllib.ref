@@ -1,0 +1,6 @@
+AR eightbitadder behavioral "C:/Documents and Settings/sturm121/Desktop/8bitadder/8bitAdder.vhd" sub00/vhpl03 1294263807
+AR fulladder behavioral "C:/Documents and Settings/sturm121/Desktop/8bitadder/FullAdder.vhd" sub00/vhpl01 1294263805
+EN fulladder NULL "C:/Documents and Settings/sturm121/Desktop/8bitadder/FullAdder.vhd" sub00/vhpl00 1294263804
+AR eightbitadder_tb_vhd behavior "C:/Documents and Settings/sturm121/Desktop/8bitadder/EightBitAdder_tb.vhd" sub00/vhpl05 1294263809
+EN eightbitadder NULL "C:/Documents and Settings/sturm121/Desktop/8bitadder/8bitAdder.vhd" sub00/vhpl02 1294263806
+EN eightbitadder_tb_vhd NULL "C:/Documents and Settings/sturm121/Desktop/8bitadder/EightBitAdder_tb.vhd" sub00/vhpl04 1294263808

@@ -1,0 +1,5 @@
+xst -ise "C:/8bitAdder/8bitAdder.ise" -intstyle ise -ifn EightBitAdder.xst -ofn EightBitAdder.syr
+xst -ise "C:/8bitAdder/8bitAdder.ise" -intstyle ise -ifn EightBitAdder.xst -ofn EightBitAdder.syr
+xst -ise "C:/Documents and Settings/sturm121/Desktop/8bitadder/8bitAdder.ise" -intstyle ise -ifn EightBitAdder.xst -ofn EightBitAdder.syr
+xst -ise "C:/Documents and Settings/sturm121/Desktop/8bitadder/8bitAdder.ise" -intstyle ise -ifn EightBitAdder.xst -ofn EightBitAdder.syr
+xst -ise "C:/Documents and Settings/sturm121/Desktop/8bitadder/8bitAdder.ise" -intstyle ise -ifn EightBitAdder.xst -ofn EightBitAdder.syr

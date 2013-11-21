@@ -1,0 +1,4 @@
+AR eightbitadder behavioral C:/8bitAdder/8bitAdder.vhd sub00/vhpl03 1294091837
+AR fulladder behavioral C:/8bitAdder/FullAdder.vhd sub00/vhpl01 1294091835
+EN fulladder NULL C:/8bitAdder/FullAdder.vhd sub00/vhpl00 1294091834
+EN eightbitadder NULL C:/8bitAdder/8bitAdder.vhd sub00/vhpl02 1294091836

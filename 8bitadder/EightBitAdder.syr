@@ -1,0 +1,367 @@
+Release 9.1.03i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.19 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.19 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: EightBitAdder.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "EightBitAdder.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "EightBitAdder"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : EightBitAdder
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : EightBitAdder.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/sturm121/Desktop/8bitadder/FullAdder.vhd" in Library work.
+Architecture behavioral of Entity fulladder is up to date.
+Compiling vhdl file "C:/Documents and Settings/sturm121/Desktop/8bitadder/8bitAdder.vhd" in Library work.
+Entity <eightbitadder> compiled.
+Entity <eightbitadder> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <EightBitAdder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FullAdder> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <EightBitAdder> in library <work> (Architecture <behavioral>).
+Entity <EightBitAdder> analyzed. Unit <EightBitAdder> generated.
+
+Analyzing Entity <FullAdder> in library <work> (Architecture <behavioral>).
+Entity <FullAdder> analyzed. Unit <FullAdder> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <FullAdder>.
+    Related source file is "C:/Documents and Settings/sturm121/Desktop/8bitadder/FullAdder.vhd".
+    Found 1-bit xor3 for signal <S>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <FullAdder> synthesized.
+
+
+Synthesizing Unit <EightBitAdder>.
+    Related source file is "C:/Documents and Settings/sturm121/Desktop/8bitadder/8bitAdder.vhd".
+    Found 9-bit register for signal <Y>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <EightBitAdder> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ 9-bit register                                        : 1
+# Xors                                                 : 8
+ 1-bit xor3                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\ISE91.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+# Xors                                                 : 8
+ 1-bit xor3                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <EightBitAdder> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block EightBitAdder, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : EightBitAdder.ngr
+Top Level Output File Name         : EightBitAdder
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 36
+
+Cell Usage :
+# BELS                             : 16
+#      LUT3                        : 16
+# FlipFlops/Latches                : 9
+#      FD                          : 9
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 35
+#      IBUF                        : 17
+#      OBUF                        : 18
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       9  out of   4656     0%  
+ Number of 4 input LUTs:                16  out of   9312     0%  
+ Number of IOs:                         36
+ Number of bonded IOBs:                 36  out of    232    15%  
+    IOB Flip Flops:                      9
+ Number of GCLKs:                        1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 9     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 11.462ns
+   Maximum output required time after clock: 4.283ns
+   Maximum combinational path delay: 14.873ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 97 / 9
+-------------------------------------------------------------------------
+Offset:              11.462ns (Levels of Logic = 9)
+  Source:            B<0> (PAD)
+  Destination:       Y_8 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: B<0> to Y_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.622  B_0_IBUF (B_0_IBUF)
+     LUT3:I0->O            2   0.704   0.526  U1/Co1 (carry<0>)
+     LUT3:I1->O            2   0.704   0.526  U2/Co1 (carry<1>)
+     LUT3:I1->O            2   0.704   0.526  U3/Co1 (carry<2>)
+     LUT3:I1->O            2   0.704   0.526  U4/Co1 (carry<3>)
+     LUT3:I1->O            2   0.704   0.526  U5/Co1 (carry<4>)
+     LUT3:I1->O            2   0.704   0.526  U6/Co1 (carry<5>)
+     LUT3:I1->O            2   0.704   0.526  U7/Co1 (carry<6>)
+     LUT3:I1->O            2   0.704   0.000  U8/Co1 (carry<7>)
+     FD:D                      0.308          Y_8
+    ----------------------------------------
+    Total                     11.462ns (7.158ns logic, 4.304ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            Y_8 (FF)
+  Destination:       Y<8> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: Y_8 to Y<8>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.591   0.420  Y_8 (Y_8)
+     OBUF:I->O                 3.272          Y_8_OBUF (Y<8>)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 97 / 9
+-------------------------------------------------------------------------
+Delay:               14.873ns (Levels of Logic = 10)
+  Source:            B<0> (PAD)
+  Destination:       Co (PAD)
+
+  Data Path: B<0> to Co
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.622  B_0_IBUF (B_0_IBUF)
+     LUT3:I0->O            2   0.704   0.526  U1/Co1 (carry<0>)
+     LUT3:I1->O            2   0.704   0.526  U2/Co1 (carry<1>)
+     LUT3:I1->O            2   0.704   0.526  U3/Co1 (carry<2>)
+     LUT3:I1->O            2   0.704   0.526  U4/Co1 (carry<3>)
+     LUT3:I1->O            2   0.704   0.526  U5/Co1 (carry<4>)
+     LUT3:I1->O            2   0.704   0.526  U6/Co1 (carry<5>)
+     LUT3:I1->O            2   0.704   0.526  U7/Co1 (carry<6>)
+     LUT3:I1->O            2   0.704   0.447  U8/Co1 (carry<7>)
+     OBUF:I->O                 3.272          Co_OBUF (Co)
+    ----------------------------------------
+    Total                     14.873ns (10.122ns logic, 4.751ns route)
+                                       (68.1% logic, 31.9% route)
+
+=========================================================================
+CPU : 3.46 / 3.66 s | Elapsed : 4.00 / 4.00 s
+ 
+--> 
+
+Total memory usage is 157576 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
